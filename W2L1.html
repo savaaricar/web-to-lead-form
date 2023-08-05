@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Web-to-Lead Form</title>
+  <style>
+    /* Apply general styling to the form container */
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-image: url(https://wallpaperaccess.com/full/4408872.jpg); /* Replace with the URL of the darker car background image */
+      background-size: cover;
+
+    }
+
+    /* Style the form labels */
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #039bfa; /* Sky blue color */
+    }
+
+    /* Style the input fields */
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    /* Style the select fields */
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    /* Style the submit button */
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #039bfa;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Add some spacing between form elements */
+    form > * {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Your Web-to-Lead form code goes here -->
+  <div class="form-container">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+      <input type=hidden name="oid" value="00DDp00000177yz">
+      <input type=hidden name="retURL" value="http://google.com">
+
+      <label for="first_name">First Name</label>
+      <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+
+      <label for="last_name">Last Name</label>
+      <input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+
+      <label for="phone">Phone</label>
+      <input id="phone" maxlength="40" name="phone" size="20" type="text" />
+
+      <label for="email">Email</label>
+      <input id="email" maxlength="80" name="email" size="20" type="text" />
+
+      <label for="car_type">Car Type</label>
+      <select id="car_type" name="car_type" title="Car Type">
+        <option value="">--None--</option>
+        <option value="5 Seater (4+D)">5 Seater (4+D)</option>
+        <option value="7 Seater (5+D)">7 Seater (5+D)</option>
+      </select>
+
+      <label for="expected_price">Expected Price/Km</label>
+      <select id="expected_price" name="expected_price" title="Expected Price/Km">
+        <option value="">--None--</option>
+        <option value="₹15-₹18">₹15-₹18</option>
+        <option value="₹19-₹23">₹19-₹23</option>
+      </select>
+
+      <label for="from">From</label>
+      <textarea id="from" name="from" type="text" wrap="soft"></textarea>
+
+      <label for="from_date">From Date</label>
+      <span class="dateInput dateOnlyInput">
+        <input id="from_date" name="from_date" size="12" type="text" />
+      </span>
+
+      <label for="to">To</label>
+      <textarea id="to" name="to" type="text" wrap="soft"></textarea>
+
+      <label for="to_date">To Date</label>
+      <span class="dateInput dateOnlyInput">
+        <input id="to_date" name="to_date" size="12" type="text" />
+      </span>
+
+      <input type="submit" name="submit">
+    </form>
+  </div>
+</body>
+</html>
